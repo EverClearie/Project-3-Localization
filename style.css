@@ -1,4 +1,4 @@
-/* Base Styles */
+/* Base Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +10,7 @@ body {
   background-color: #f5f5f5;
   color: #333;
   line-height: 1.6;
-  direction: rtl; /* RTL Layout */
+  direction: rtl;
 }
 
 /* Hero Section */
@@ -26,7 +26,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Timeline Section */
+/* Timeline Scroll Section */
 .timeline {
   display: flex;
   gap: 1.5rem;
@@ -44,6 +44,7 @@ body {
   scroll-snap-align: start;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  text-align: right;
 }
 
 .card img {
@@ -74,21 +75,25 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Bootstrap-Based Additions */
+/* 3-Column Bootstrap Section Enhancements */
 section.container {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-/* Fix placeholder alignment in RTL for forms */
-form input::placeholder {
-  text-align: right;
+.bi {
+  margin-bottom: 0.5rem;
+  color: #003b70;
 }
 
-/* Label text alignment (RTL) */
+/* Form RTL Fixes */
 form .form-label {
   text-align: right;
   display: block;
+}
+
+form input::placeholder {
+  text-align: right;
 }
 
 /* Footer */
@@ -96,11 +101,11 @@ footer {
   background: #003b70;
   color: white;
   padding: 1rem;
-  font-size: 0.9rem;
   text-align: center;
+  font-size: 0.9rem;
 }
 
-/* Responsive Fix for Timeline */
+/* Mobile Tweaks */
 @media (max-width: 768px) {
   .timeline {
     flex-direction: column;
@@ -113,8 +118,3 @@ footer {
   }
 }
 
-/* Icon Styling */
-.bi {
-  margin-bottom: 0.5rem;
-  color: #003b70;
-}
