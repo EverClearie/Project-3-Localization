@@ -29,7 +29,7 @@ body {
 /* Timeline Layout */
 .timeline {
   display: flex;
-  flex-direction: row-reverse; /* This ensures RTL scroll works as expected */
+  flex-direction: row-reverse; /* RTL horizontal scroll */
   gap: 1.5rem;
   overflow-x: auto;
   padding: 2rem;
@@ -119,4 +119,3 @@ footer {
     flex: 1 1 auto;
   }
 }
-
