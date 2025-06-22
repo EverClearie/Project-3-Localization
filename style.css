@@ -10,7 +10,7 @@ body {
   background-color: #f5f5f5;
   color: #333;
   line-height: 1.6;
-  direction: rtl;
+  direction: rtl; /* Right-to-left layout */
 }
 
 /* Hero Section */
@@ -26,15 +26,17 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Timeline Scroll Section */
+/* Timeline Layout */
 .timeline {
   display: flex;
+  flex-direction: row-reverse; /* This ensures RTL scroll works as expected */
   gap: 1.5rem;
   overflow-x: auto;
   padding: 2rem;
   scroll-snap-type: x mandatory;
 }
 
+/* Timeline Cards */
 .card {
   flex: 0 0 250px;
   background: white;
@@ -75,7 +77,7 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* 3-Column Bootstrap Section Enhancements */
+/* Three-Column Section */
 section.container {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -105,7 +107,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Mobile Tweaks */
+/* Responsive Fixes for Mobile */
 @media (max-width: 768px) {
   .timeline {
     flex-direction: column;
